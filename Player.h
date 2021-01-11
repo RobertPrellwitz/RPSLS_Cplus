@@ -18,6 +18,7 @@ public:
 class Human: public Player{
 public:
     string setName();
+    string chooseGesture();
 
 
 };

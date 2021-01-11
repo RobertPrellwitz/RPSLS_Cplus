@@ -15,3 +15,17 @@ string Computer::setName(){
     name = "Amd Ryzen 9";
     return name;
 }
+string Human::chooseGesture(){
+    string gesture;
+    int choice;
+    cout << "Please select your gesture choice for this round \n"
+            "use the number next to the desired option to play.\n";
+            for (int i = 0; i <= choices->length(); i++ ){
+                cout << i <<": " << choices[i] << endl;
+            }
+
+            cin >> choice;
+            gesture = choices[choice];
+            cout << gesture;
+            return gesture;
+}

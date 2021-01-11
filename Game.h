@@ -13,6 +13,7 @@ public:
     void playerType(Player player1);
     void runGame();
     Player PlayerTypeII(Player player1);
+    int gameLength();
 };
 
 

@@ -10,10 +10,19 @@
 #pragma once
 class Game {
 public:
-    void playerType(Player player1);
+    string player1gesture;
+    string player2gesture;
+    int PlayerType();
     void runGame();
-    Player PlayerTypeII(Player player1);
+
+    Player PlayerTypeII();
     int gameLength();
+    string player1Turn();
+    void player2Turn();
+
+    Computer player2Comp();
+
+    Human player2Hum();
 };
 
 

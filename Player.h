@@ -12,20 +12,21 @@ public:
     string name;
     string choices[5] = {"Rock", "Paper", "Scissors", "Lizard", "Spock"};
     string gesture;
+    string chooseGesture();
     int score = 0;
+
 };
 
 class Human: public Player{
 public:
     string setName();
     string chooseGesture();
-
-
 };
 
 class Computer: public Player{
 public:
     string setName();
+    string chooseGesture();
 };
 
 

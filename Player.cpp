@@ -1,6 +1,7 @@
 //
 // Created by Robert Prellwitz on 1/10/21.
 //
+#include <cstdlib>
 #include <string>
 #include <iostream>
 #include "Player.h"
@@ -11,10 +12,7 @@ string Human::setName(){
     cin >> name;
     return name;
 }
-string Computer::setName(){
-    name = "Amd Ryzen 9";
-    return name;
-}
+
 string Human::chooseGesture(){
     string gesture;
     int choice;
@@ -23,9 +21,20 @@ string Human::chooseGesture(){
             for (int i = 0; i <= choices->length(); i++ ){
                 cout << i <<": " << choices[i] << endl;
             }
-
             cin >> choice;
             gesture = choices[choice];
             cout << gesture;
             return gesture;
+}
+string Computer::chooseGesture(){
+    srand((unsigned int) time(0));
+    int randNum = rand() % 4;
+    string gesture = choices[randNum];
+    cout << gesture;
+    return gesture;
+}
+
+string Computer::setName() {
+    name = "AMD Ryzen9";
+    return name;
 }
